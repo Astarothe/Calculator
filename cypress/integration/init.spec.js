@@ -405,29 +405,18 @@ describe('Home page', () => {
   })
 
   it('it check correct link transitions', () => {
-    cy.get('a[href="/settings"]').click()
+    cy.get('a[href="#/settings"]').click()
     cy.location().should(loc => {
-      expect(loc.pathname).to.eq('/settings')
+      expect(loc.hash).to.eq('#/settings')
       expect(loc.port).to.eq('3030')
     })
   })
-
-
-  // it('it check loader', () => {
-  //   cy.get('svg').should('be.visible')
-  // })
-  //
-  // it('it check welcome title', () => {
-  //   cy.get('#welcome')
-  //     .should('be.visible')
-  //     .contains('Welcome!')
-  // })
 })
 
 
 describe('Settings page', () => {
   beforeEach(() => {
-    cy.visit('/settings')
+    cy.visit('/#/settings')
   })
 
   it('it check correct switch dark theme', () => {
@@ -455,7 +444,7 @@ describe('Settings page', () => {
 
   it('it check correct clear all history', () => {
 
-    cy.get('a[href="/"]').click()
+    cy.get('a[href="#/"]').click()
     cy.get('button').contains('2').click()
     cy.get('button').contains('+').click()
     cy.get('button').contains('1').click()
@@ -473,10 +462,10 @@ describe('Settings page', () => {
     cy.get('p:first-child').should('contain', '2 + 1')
     cy.get('p:last-child').should('contain', '3 + 3')
 
-    cy.get('a[href="/settings"]').click()
+    cy.get('a[href="#/settings"]').click()
     cy.get('button').contains('Clear All History').click()
 
-    cy.get('a[href="/"]').click()
+    cy.get('a[href="#/"]').click()
 
     cy.get('span')
       .should('not.be.visible')

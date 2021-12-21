@@ -22,6 +22,7 @@ export const Keypad = React.memo(() => {
 
   const buttonHandler = value => {
     const newValue = valueDisplay === ZERO ? value : valueDisplay + value
+    const resultValue = getMathHandler(valueDisplay)
 
     switch (value) {
       case CLEAR_LAST :
@@ -33,8 +34,8 @@ export const Keypad = React.memo(() => {
         break
       case CALCULATE:
       case ENTER:
-        setLastValue(valueDisplay)
-        valueDisplay !== lastValue && dispatch(calcValueAC(getMathHandler(valueDisplay), separator(valueDisplay)))
+        setLastValue(resultValue)
+        valueDisplay !== lastValue && dispatch(calcValueAC(resultValue, separator(valueDisplay)))
         break
       case DOT:
         // находим сколько точек, у последнего элемента, и если их меньше одной, тогда добавляем.
