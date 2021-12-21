@@ -2388,6 +2388,8 @@ and limitations under the License.
 
 // },
 
+// находим сколько точек, у последнего элемента, и если их меньше одной, тогда добавляем.
+
 // удаляем лишние пробелы
 
 //# sourceMappingURL=react-router.js.map
