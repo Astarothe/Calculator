@@ -19,9 +19,8 @@ export const Keypad = React.memo(() => {
   const { currentValue: valueDisplay, operation } = useSelector(state => state.calculator)
   const [lastValue, setLastValue] = useState(0)
   const dispatch = useDispatch()
-  throw Error("fff")
-  const buttonHandler = value => {
 
+  const buttonHandler = value => {
     const newValue = valueDisplay === ZERO ? value : valueDisplay + value
 
     switch (value) {
