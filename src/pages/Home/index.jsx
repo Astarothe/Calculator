@@ -7,6 +7,8 @@ import { ErrorBoundary } from '@/components/A7_ErrorBoundary/ErrorBoundary'
 export const HomePage = () => {
   const home = useRef(null)
 
+
+
   useEffect(() => {
     home.current.style.transition = '0.5s'
     home.current.style.transform = 'translateX(0)'
