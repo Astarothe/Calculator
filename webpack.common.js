@@ -9,8 +9,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: 'Calculator/',
+    filename: 'Calculator/bundle.js',
+    publicPath: '/',
   },
   plugins: [
     new CleanWebpackPlugin(),
