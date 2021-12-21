@@ -7,14 +7,9 @@ import {
 } from '@/constants'
 import {
   allTheme,
-  black,
   coloredColors,
-  colorBackButton,
-  darkBlack,
   darkColors,
   lightColors,
-  smokyWhite,
-  white,
 } from '@/theme'
 
 const INITIAL_STATE = {

@@ -51,7 +51,8 @@ class SwitchTheme extends React.PureComponent {
     const optionsTheme = itemsTheme
       .map(o => o.id === this.props.currentTheme
         ? <option style={{ display: 'none' }}
-                  key={o.id} value={o.id}>{o.value}</option>
+                  key={o.id} value={o.id}>{o.value}
+          </option>
         : <option key={o.id} value={o.id}>{o.value}</option>)
 
 

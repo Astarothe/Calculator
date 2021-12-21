@@ -67,7 +67,7 @@ export function getMathHandler(value) {
 
 
     function mulDiv(mathStr) {
-      const length = (mathStr.match(/\/|\*/g) || []).length
+      const {length} = mathStr.match(/\/|\*/g) || []
       if (!length) return mathStr
 
       for (let i = 0; i < length; i++) {
@@ -84,7 +84,7 @@ export function getMathHandler(value) {
     }
 
     function plusMinus(mathStr) {
-      const length = (mathStr.match(/\+|-/g) || []).length
+      const {length} = mathStr.match(/\+|-/g) || []
       if (!length) return mathStr
 
       for (let i = 0; i < length; i++) {
