@@ -1,0 +1,17 @@
+// CalcReducer
+export const ADD_VALUE = "@CALCULATE/ADD_VALUE"
+export const RESET_LAST_VALUE = "@CALCULATE/RESET_LAST_VALUE"
+export const RESET_VALUE = "@CALCULATE/RESET_VALUE"
+export const ADD_OPERATION = "@CALCULATE/ADD_OPERATION"
+
+// CalcReducer && HistoryReducer
+export const CALCULATE_VALUE = "@CALCULATE/CALC_VALUE"
+
+// HistoryReducer
+
+export const CLEAR_HISTORY = "@HISTORY/CLEAR_HISTORY"
+
+// ThemeReducer
+export const CHANGE_ON_LIGHT_THEME = "@THEME/CHANGE_THEME"
+export const CHANGE_ON_DARK_THEME = "@THEME/CHANGE_ON_DARK_THEME"
+export const CHANGE_ON_COLORED_THEME = "@THEME/CHANGE_ON_COLORED_THEME"
