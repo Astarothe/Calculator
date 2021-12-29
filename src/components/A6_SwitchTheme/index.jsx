@@ -12,8 +12,8 @@ class SwitchTheme extends React.PureComponent {
     this.dispatch = this.props.dispatch
   }
 
-  handleOnChangeTheme = e => {
-    const targetValue = e.target.value
+  handleOnChangeTheme = event => {
+    const targetValue = event.target.value
 
     if (targetValue === LIGHT_THEME_ID) {
       this.dispatch(changeOnLightThemeAC())
@@ -49,11 +49,11 @@ class SwitchTheme extends React.PureComponent {
 
   render() {
     const optionsTheme = itemsTheme
-      .map(o => o.id === this.props.currentTheme
+      .map(option => option.id === this.props.currentTheme
         ? <option style={{ display: 'none' }}
-                  key={o.id} value={o.id}>{o.value}
+                  key={option.id} value={option.id}>{option.value}
           </option>
-        : <option key={o.id} value={o.id}>{o.value}</option>)
+        : <option key={option.id} value={option.id}>{option.value}</option>)
 
 
     return (
