@@ -1,13 +1,13 @@
 import React from 'react'
+import Switch from 'react-router-dom/es/Switch'
+import Route from 'react-router-dom/es/Route'
+import { useSelector } from 'react-redux'
+import { ThemeProvider } from 'styled-components'
 
 import { HOME_PAGE_ROUTE, SETTINGS_PAGE_ROUTE } from '@/constants'
 import SettingsPage from '@/pages/Settings'
 import { HomePage } from '@/pages/Home'
-import Switch from 'react-router-dom/es/Switch'
-import Route from 'react-router-dom/es/Route'
 import { HeaderMain } from '@/components/A1_Header'
-import { useSelector } from 'react-redux'
-import { ThemeProvider } from 'styled-components'
 import { ErrorBoundary } from '@/components/A7_ErrorBoundary/ErrorBoundary'
 
 

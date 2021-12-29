@@ -1,8 +1,9 @@
 import React, { createRef } from 'react'
+import { connect } from 'react-redux'
+
+import { clearHistoryAC } from '@/actions'
 import { ButtonClear, Heading, WrapperSettings } from '@/pages/Settings/components'
 import SwitchTheme from '@/components/A6_SwitchTheme'
-import { connect } from 'react-redux'
-import { clearHistoryAC } from '@/actions'
 import { ErrorBoundary } from '@/components/A7_ErrorBoundary/ErrorBoundary'
 
 
