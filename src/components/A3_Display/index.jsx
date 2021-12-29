@@ -4,17 +4,17 @@ import { useSelector } from 'react-redux'
 import { separator } from '@/helpers'
 
 export const Display = () => {
-  const valueDisplay = useSelector(state => state.calculator.currentValue)
-  const resultValue = useSelector(state => state.calculator.result)
-  const display = separator(valueDisplay)
+   const valueDisplay = useSelector(state => state.calculator.currentValue)
+   const resultValue = useSelector(state => state.calculator.result)
+   const display = separator(valueDisplay)
 
-  return (
-    <DisplayWrapper>
-      <Result>{resultValue}</Result>
-      <Expression>
+   return (
+      <DisplayWrapper>
+         <Result>{resultValue}</Result>
+         <Expression>
 
-        {display}
-      </Expression>
-    </DisplayWrapper>
-  )
+            {display}
+         </Expression>
+      </DisplayWrapper>
+   )
 }

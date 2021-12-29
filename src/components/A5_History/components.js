@@ -22,7 +22,7 @@ export const HistoryTitle = styled.h2`
    }
 
    ${({ theme }) => theme.above.small({
-     fontSize: theme.fontSizes[1],
+      fontSize: theme.fontSizes[1],
    })}
 `
 

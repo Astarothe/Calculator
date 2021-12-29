@@ -23,32 +23,32 @@ export const Button = styled.button`
    }
 
    ${({ theme }) => theme.above.xs({
-     width: "70px",
-     height: "75px",
-     fontSize: theme.fontSizes[1],
+      width: "70px",
+      height: "75px",
+      fontSize: theme.fontSizes[1],
    })}
 
    ${({ theme }) => theme.above.small({
-     width: "110px",
-     height: "110px",
+      width: "110px",
+      height: "110px",
    })}
 
    ${({ theme }) => theme.above.med({
-     width: "150px",
-     height: "150px",
-     fontSize: theme.fontSizes[3],
+      width: "150px",
+      height: "150px",
+      fontSize: theme.fontSizes[3],
    })}
 
    ${({ theme }) => theme.above.large({
-     width: "115px",
-     height:" 120px",
-     margin: '22px 25px',
+      width: "115px",
+      height:" 120px",
+      margin: '22px 25px',
    })}
 
    ${({ theme }) => theme.above.xl({
-     width: "150px",
-     height: "150px",
-     margin: "22px 40px",
+      width: "150px",
+      height: "150px",
+      margin: "22px 40px",
    })}
 `
 export const ButtonsWrapper = styled(Wrapper)`

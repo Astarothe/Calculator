@@ -7,8 +7,8 @@ import rootSaga from './sagas'
 const sagaMiddleware = createSagaMiddleware()
 
 export const store = createStore(
-  rootReducer,
-  applyMiddleware(sagaMiddleware),
+   rootReducer,
+   applyMiddleware(sagaMiddleware),
 )
 
 sagaMiddleware.run(rootSaga)

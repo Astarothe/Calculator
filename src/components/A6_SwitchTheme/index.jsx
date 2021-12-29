@@ -7,63 +7,65 @@ import { itemsTheme, DARK_THEME_ID, LIGHT_THEME_ID, COLORED_THEME_ID } from '@/c
 import { coloredBackground, darkBackground, white } from '@/theme'
 
 class SwitchTheme extends React.PureComponent {
-  constructor(props) {
-    super(props)
-    this.dispatch = this.props.dispatch
-  }
+   constructor(props) {
+      super(props)
+      this.dispatch = this.props.dispatch
+   }
 
   handleOnChangeTheme = e => {
-    const targetValue = e.target.value
+  	const targetValue = e.target.value
 
-    if (targetValue === LIGHT_THEME_ID) {
-      this.dispatch(changeOnLightThemeAC())
-    } else if (targetValue === DARK_THEME_ID) {
-      this.dispatch(changeOnDarkThemeAC())
-    } else{
-      this.dispatch(changeOnColoredThemeAC())
-    }
+  	if (targetValue === LIGHT_THEME_ID) {
+  		this.dispatch(changeOnLightThemeAC())
+  	} else if (targetValue === DARK_THEME_ID) {
+  		this.dispatch(changeOnDarkThemeAC())
+  	} else{
+  		this.dispatch(changeOnColoredThemeAC())
+  	}
   }
 
   changeThemeBody = () => {
-    document.body.style.transition = '0.3s'
-    console.log(this.props)
-    switch (this.props.currentTheme) {
-      case DARK_THEME_ID:
-        document.body.style.background = darkBackground
-        break
-      case COLORED_THEME_ID:
-        document.body.style.background = coloredBackground
-        break
-      default:
-        document.body.style.background = white
-    }
+  	document.body.style.transition = '0.3s'
+  	console.log(this.props)
+  	switch (this.props.currentTheme) {
+  		case DARK_THEME_ID:
+  			document.body.style.background = darkBackground
+  			break
+  		case COLORED_THEME_ID:
+  			document.body.style.background = coloredBackground
+  			break
+  		default:
+  			document.body.style.background = white
+  	}
   }
 
   componentDidMount() {
-    this.changeThemeBody()
+  	this.changeThemeBody()
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    this.changeThemeBody()
+  	this.changeThemeBody()
   }
 
   render() {
-    const optionsTheme = itemsTheme
-      .map(o => o.id === this.props.currentTheme
-        ? <option style={{ display: 'none' }}
-                  key={o.id} value={o.id}>{o.value}
-          </option>
-        : <option key={o.id} value={o.id}>{o.value}</option>)
+  	const optionsTheme = itemsTheme
+  		.map(o => o.id === this.props.currentTheme ?
+           <option style={{ display: 'none' }}
+              key={o.id}
+              value={o.id}>
+  				        {o.value}
+           </option>
+           : <option key={o.id} value={o.id}>{o.value}</option>)
 
 
-    return (
-      <WrapperSwitch>
-        <TitleTheme>Switch Theme</TitleTheme>
-        <Select value={this.props.currentTheme} onChange={this.handleOnChangeTheme}>
-          {optionsTheme}
-        </Select>
-      </WrapperSwitch>
-    )
+  	return (
+  		<WrapperSwitch>
+  			<TitleTheme>Switch Theme</TitleTheme>
+  			<Select value={this.props.currentTheme} onChange={this.handleOnChangeTheme}>
+  				{optionsTheme}
+  			</Select>
+  		</WrapperSwitch>
+  	)
   }
 
 

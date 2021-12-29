@@ -5,12 +5,12 @@ import { WrapperCalculator } from '@/components/A2_Calculator/components'
 import { ErrorBoundary } from '@/components/A7_ErrorBoundary/ErrorBoundary'
 
 export const Calculator = React.memo(() => {
-  return (
-    <ErrorBoundary>
-      <WrapperCalculator>
-        <Display />
-        <Keypad />
-      </WrapperCalculator>
-    </ErrorBoundary>
-  )
+   return (
+      <ErrorBoundary>
+         <WrapperCalculator>
+            <Display />
+            <Keypad />
+         </WrapperCalculator>
+      </ErrorBoundary>
+   )
 })

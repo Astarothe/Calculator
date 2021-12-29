@@ -5,8 +5,8 @@ import { historyReducer } from '@/reducers/historyReducer'
 import { themeReducer } from '@/reducers/themeReducer'
 
 export const rootReducer = combineReducers({
-  example,
-  calculator: calcReducer,
-  history: historyReducer,
-  theme: themeReducer,
+   example,
+   calculator: calcReducer,
+   history: historyReducer,
+   theme: themeReducer,
 })

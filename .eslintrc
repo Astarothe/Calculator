@@ -20,9 +20,22 @@
         "ignorePattern": "import"
       }
     ],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" }
+    ],
+    "indent": ["error",3, {"SwitchCase": 1} ],
+    "no-whitespace-before-property": "error",
     "no-unused-vars": "warn",
-    "operator-linebreak": "warn",
-    "react-hooks/rules-of-hooks": "error",
+ "operator-linebreak": [
+  "error",
+  "after",
+  {
+    "overrides": {
+      ":": "before"
+    }
+  }
+],
     "react/jsx-closing-tag-location": 2,
     "react/jsx-closing-bracket-location": "off",
     "react/jsx-max-props-per-line": [
@@ -64,6 +77,4 @@
       }
     }
   ],
-
-
 }
