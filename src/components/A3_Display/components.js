@@ -11,12 +11,12 @@ export const Expression = styled.h3`
    word-wrap: break-word;
 
    ${({ theme }) => theme.above.xs({
-     fontSize: theme.fontSizes[3],
-     padding: '40px 64px 20px',
+      fontSize: theme.fontSizes[3],
+      padding: '40px 64px 20px',
    })}
 
    ${({ theme }) => theme.above.med({
-     padding: ' 56px 64px 30px',
+      padding: ' 56px 64px 30px',
    })}
 
 
@@ -31,9 +31,9 @@ export const Expression = styled.h3`
       left: 5%;
 
       ${({ theme }) => theme.above.large({
-        left: '3%',
-        width: '95%',
-      })}
+      left: '3%',
+      width: '95%',
+   })}
     }
 
 `

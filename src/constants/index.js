@@ -20,7 +20,7 @@ export const COLORED_THEME = 'Colored Theme'
 export const DARK_THEME = 'Dark Theme'
 
 export const arrButtons = [CLEAR_ALL, '7', '8', '9', MULTIPLICATION, SUBTRACT, '4', '5',
-  '6', DIVISION, SUM, '1', '2', '3', CALCULATE, DOT, OPEN_BRACKET, ZERO, CLOSED_BRACKET, CLEAR_LAST]
+   '6', DIVISION, SUM, '1', '2', '3', CALCULATE, DOT, OPEN_BRACKET, ZERO, CLOSED_BRACKET, CLEAR_LAST]
 
 export const NUMBERS = ['1','2',"3",'4',"5","6",'7',"8","9"]
 
@@ -30,9 +30,9 @@ export const DARK_THEME_ID = 'dark'
 export const COLORED_THEME_ID = 'colored'
 
 export const itemsTheme = [
-  { id: LIGHT_THEME_ID, value: LIGHT_THEME },
-  { id: COLORED_THEME_ID, value: COLORED_THEME },
-  { id: DARK_THEME_ID, value: DARK_THEME },
+   { id: LIGHT_THEME_ID, value: LIGHT_THEME },
+   { id: COLORED_THEME_ID, value: COLORED_THEME },
+   { id: DARK_THEME_ID, value: DARK_THEME },
 ]
 
 export const operation = [MULTIPLICATION, SUBTRACT, DIVISION, SUM]

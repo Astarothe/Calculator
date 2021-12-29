@@ -6,8 +6,8 @@ export const NameProject = styled.h1`
    color: ${({ theme }) => theme.colors.white};
 
    ${({ theme }) => theme.above.small({
-     fontSize: theme.fontSizes[1],
-  })}
+      fontSize: theme.fontSizes[1],
+   })}
 `
 
 export const Header = styled.header`
@@ -18,8 +18,8 @@ export const Header = styled.header`
    justify-content: space-around;
 
    ${({ theme }) => theme.above.xs({
-     padding: '37px',
-     justifyContent: 'space-between',
+      padding: '37px',
+      justifyContent: 'space-between',
    })}
 `
 
@@ -59,7 +59,7 @@ export const Link = styled(NavLink)`
    }
 
    ${({ theme }) => theme.above.small({
-     fontSize: theme.fontSizes[2],
+      fontSize: theme.fontSizes[2],
    })}
 `
 
@@ -70,12 +70,12 @@ export const WrapperLink = styled.div`
    justify-content: space-around;
 
    ${({ theme }) => theme.above.small({
-     width: '230px',
-     justifyContent: 'space-between',
+      width: '230px',
+      justifyContent: 'space-between',
    })};
 
    ${({ theme }) => theme.above.large({
-     width: '250px',
-     justifyContent: 'space-around',
+      width: '250px',
+      justifyContent: 'space-around',
    })}
 `
