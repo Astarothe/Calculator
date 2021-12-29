@@ -3,7 +3,7 @@ import { changeOnColoredThemeAC, changeOnDarkThemeAC, changeOnLightThemeAC } fro
 import { connect } from 'react-redux'
 import { Select } from '@/components/A6_SwitchTheme/components'
 import { TitleTheme, WrapperSwitch } from '@/pages/Settings/components'
-import { itemsTheme, DARK_THEME_ID, LIGHT_THEME_ID, COLORED_THEME_ID } from '@/constants'
+import { ITEMS_THEME, DARK_THEME_ID, LIGHT_THEME_ID, COLORED_THEME_ID } from '@/constants'
 import { coloredBackground, darkBackground, white } from '@/theme'
 
 class SwitchTheme extends React.PureComponent {
@@ -48,7 +48,7 @@ class SwitchTheme extends React.PureComponent {
   }
 
   render() {
-    const optionsTheme = itemsTheme
+    const optionsTheme = ITEMS_THEME
       .map(o => o.id === this.props.currentTheme
         ? <option style={{ display: 'none' }}
                   key={o.id} value={o.id}>{o.value}

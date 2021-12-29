@@ -4,14 +4,14 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addOperationAC, addValueAC, calcValueAC, resetLastValueAC, resetValueAC } from '@/actions'
 import { getMathHandler, separator } from '@/helpers'
 import {
-  allEvents,
-  arrButtons,
+  ALL_EVENTS,
+  ARR_BUTTONS,
   BACKSPACE,
   CALCULATE,
   CLEAR_ALL,
   CLEAR_LAST, DIVISION, DOT, ENTER,
   MULTIPLICATION,
-  operationAndScope, SUBTRACT, SUM,
+  OPERATION_AND_SCOPE, SUBTRACT, SUM,
   ZERO,
 } from '@/constants'
 
@@ -40,7 +40,7 @@ export const Keypad = React.memo(() => {
       case DOT:
         // находим сколько точек, у последнего элемента, и если их меньше одной, тогда добавляем.
         separator(valueDisplay).split(' ').slice(-1)[0].replace(/[^.]/g, '').length < 1 &&
-        !operationAndScope.includes(valueDisplay[valueDisplay.length - 1]) &&
+        !OPERATION_AND_SCOPE.includes(valueDisplay[valueDisplay.length - 1]) &&
         dispatch(addValueAC(newValue, getMathHandler(newValue)))
         break
       case SUM:
@@ -54,7 +54,7 @@ export const Keypad = React.memo(() => {
     }
   }
 
-  const allButtons = arrButtons.map((value, i) => (
+  const allButtons = ARR_BUTTONS.map((value, i) => (
       <Button key={i} onClick={() => buttonHandler(value)}>
         {value}
       </Button>
@@ -63,7 +63,7 @@ export const Keypad = React.memo(() => {
 
   useEffect(() => {
     const keyDownHandler = e => {
-      allEvents.includes(e.key) && buttonHandler(e.key)
+      ALL_EVENTS.includes(e.key) && buttonHandler(e.key)
     }
 
     window.addEventListener('keydown', keyDownHandler)

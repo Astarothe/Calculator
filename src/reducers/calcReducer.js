@@ -7,7 +7,7 @@ import {
   RESET_LAST_VALUE,
   RESET_VALUE,
   ZERO,
-  operation,
+  OPERATION,
 } from '@/constants'
 import { getMathHandler } from '@/helpers'
 
@@ -43,7 +43,7 @@ export const calcReducer = (state = INITIAL_STATE, action) => {
     case ADD_OPERATION:
       return {
         ...state,
-        currentValue: state.operation !== action.payload.operation && state.operation !== null && operation.includes(state.operation)
+        currentValue: state.operation !== action.payload.operation && state.operation !== null && OPERATION.includes(state.operation)
           ? state.currentValue.slice(0, -1) + action.payload.operation
           : state.currentValue + action.payload.operation,
         ...action.payload,

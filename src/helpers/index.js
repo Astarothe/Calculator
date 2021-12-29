@@ -1,4 +1,4 @@
-import { DIVISION, DOT, MULTIPLICATION, operationAndScope, SUBTRACT, SUM } from '@/constants'
+import { DIVISION, DOT, MULTIPLICATION, OPERATION_AND_SCOPE, SUBTRACT, SUM } from '@/constants'
 
 export function getMathHandler(value) {
   const math = getMathFn()
@@ -165,7 +165,7 @@ export function getMathHandler(value) {
 
 export function separator(str) {
   return str.split('')
-    .map(n => !operationAndScope.includes(n) ? n : ` ${n} `)
+    .map(n => !OPERATION_AND_SCOPE.includes(n) ? n : ` ${n} `)
     .join('')
     .replace(/ {1,}/g, ' ') // удаляем лишние пробелы
 }
