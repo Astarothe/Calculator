@@ -25,8 +25,6 @@ class SwitchTheme extends React.PureComponent {
   }
 
   changeThemeBody = () => {
-    document.body.style.transition = '0.3s'
-    console.log(this.props)
     switch (this.props.currentTheme) {
       case DARK_THEME_ID:
         document.body.style.background = darkBackground

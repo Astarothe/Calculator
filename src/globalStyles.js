@@ -30,5 +30,6 @@ export default createGlobalStyle`
     background-position: center;
     background-repeat: no-repeat;
     -webkit-tap-highlight-color: transparent;
+    transition: 0.3s;
   }
 `
