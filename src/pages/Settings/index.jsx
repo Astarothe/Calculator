@@ -1,9 +1,9 @@
 import React, { createRef } from 'react'
 import { ButtonClear, Heading, WrapperSettings } from '@/pages/Settings/components'
-import SwitchTheme from '@/components/A6_SwitchTheme'
+import SwitchTheme from '@/components/SwitchTheme'
 import { connect } from 'react-redux'
 import { clearHistoryAC } from '@/actions'
-import { ErrorBoundary } from '@/components/A7_ErrorBoundary/ErrorBoundary'
+import { ErrorBoundary } from '@/components/ErrorBoundary/ErrorBoundary'
 
 
 class SettingsPage extends React.Component {
