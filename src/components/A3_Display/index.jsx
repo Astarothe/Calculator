@@ -12,7 +12,6 @@ export const Display = () => {
     <DisplayWrapper>
       <Result>{resultValue}</Result>
       <Expression>
-
         {display}
       </Expression>
     </DisplayWrapper>

@@ -13,7 +13,7 @@ export const History = () => {
           History
         </HistoryTitle>
         <HistoryItemWrapper>
-          {historyItems.map((t, i) => <HistoryItem key={i}>{t}</HistoryItem>)}
+          {historyItems.map((element, index) => <HistoryItem key={index}>{element}</HistoryItem>)}
         </HistoryItemWrapper>
       </HistoryWrapper>
     </ErrorBoundary>
