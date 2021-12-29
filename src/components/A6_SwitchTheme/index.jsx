@@ -1,6 +1,7 @@
 import React from 'react'
-import { changeOnColoredThemeAC, changeOnDarkThemeAC, changeOnLightThemeAC } from '@/actions'
 import { connect } from 'react-redux'
+
+import { changeOnColoredThemeAC, changeOnDarkThemeAC, changeOnLightThemeAC } from '@/actions'
 import { Select } from '@/components/A6_SwitchTheme/components'
 import { TitleTheme, WrapperSwitch } from '@/pages/Settings/components'
 import { itemsTheme, DARK_THEME_ID, LIGHT_THEME_ID, COLORED_THEME_ID } from '@/constants'
@@ -70,27 +71,3 @@ class SwitchTheme extends React.PureComponent {
 }
 
 export default connect(state => ({ currentTheme: state.theme.currentTheme }))(SwitchTheme)
-
-
-// console.log(props)
-// const themes = useSelector(state => state.theme.currentTheme)
-// const [currentTheme, setCurrentTheme] = useState(themes)
-// const dispatch = useDispatch()
-//
-// const onChangeTheme = e => {
-//   if (e.target.value === THEME_LIGHT) {
-//     dispatch(changeOnLightThemeAC())
-//   } else if (e.target.value === THEME_DARK) {
-//     dispatch(changeOnDarkThemeAC())
-//   }
-//   setCurrentTheme(e.target.value)
-// }
-//
-// useEffect(() => {
-//   document.body.style.transition = '0.3s'
-//   if (themes === THEME_LIGHT) {
-//     document.body.style.backgroundColor = white
-//   } else {
-//     document.body.style.backgroundColor = darkBackSettings
-//   }
-// }, [themes])
