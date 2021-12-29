@@ -54,12 +54,15 @@ export const Keypad = React.memo(() => {
     }
   }
 
-  const allButtons = arrButtons.map((value, i) => (
-      <Button key={i} onClick={() => buttonHandler(value)}>
-        {value}
-      </Button>
-    ),
-  )
+
+  const allButtons = arrButtons.map((value, i) => {
+    const buttonHandler = () => buttonHandler(value)
+
+      return <Button key={i} onClick={buttonHandler}>
+                 {value}
+             </Button>
+  })
+
 
   useEffect(() => {
     const keyDownHandler = e => {
