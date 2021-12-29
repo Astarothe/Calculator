@@ -1,7 +1,7 @@
 import React from 'react'
-import { Header, Link, NameProject, WrapperLink } from '@/components/A1_Header/component'
+import { Header, Link, NameProject, WrapperLink } from '@/components/Header/component'
 import { HOME_PAGE_ROUTE, SETTINGS_PAGE_ROUTE } from '@/constants'
-import { ErrorBoundary } from '@/components/A7_ErrorBoundary/ErrorBoundary'
+import { ErrorBoundary } from '@/components/ErrorBoundary/ErrorBoundary'
 
 export const HeaderMain = () => {
   return (

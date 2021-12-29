@@ -1,5 +1,5 @@
 import React from 'react'
-import { Expression, DisplayWrapper, Result } from '@/components/A3_Display/components'
+import { Expression, DisplayWrapper, Result } from '@/components/Display/components'
 import { useSelector } from 'react-redux'
 import { separator } from '@/helpers'
 

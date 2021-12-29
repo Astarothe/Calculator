@@ -1,5 +1,5 @@
 import React from 'react'
-import { ErrorText } from '@/components/A7_ErrorBoundary/components'
+import { ErrorText } from '@/components/ErrorBoundary/components'
 
 export class ErrorBoundary extends React.Component {
   constructor(props) {

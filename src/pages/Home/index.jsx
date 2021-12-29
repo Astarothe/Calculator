@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import { MainWrapper } from '@/pages/Home/components'
-import { Calculator } from '@/components/A2_Calculator'
-import { History } from '@/components/A5_History'
-import { ErrorBoundary } from '@/components/A7_ErrorBoundary/ErrorBoundary'
+import { Calculator } from '@/components/Calculator'
+import { History } from '@/components/History'
+import { ErrorBoundary } from '@/components/ErrorBoundary/ErrorBoundary'
 
 export const HomePage = () => {
   const home = useRef(null)

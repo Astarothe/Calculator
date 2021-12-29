@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Wrapper } from '@/pages/Home/components'
-import { DisplayWrapper } from '@/components/A3_Display/components'
+import { DisplayWrapper } from '@/components/Display/components'
 
 export const HistoryTitle = styled.h2`
    color: ${({ theme }) => theme.colors.main};
