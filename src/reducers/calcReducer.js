@@ -23,7 +23,8 @@ export const calcReducer = (state = INITIAL_STATE, action) => {
     case ADD_VALUE:
       return {
         ...state,
-        ...action.payload,
+        currentValue: action.payload.currentValue,
+        result: action.payload.result,
         operation: null,
       }
     case CALCULATE_VALUE:
@@ -46,7 +47,7 @@ export const calcReducer = (state = INITIAL_STATE, action) => {
         currentValue: state.operation !== action.payload.operation && state.operation !== null && operation.includes(state.operation)
           ? state.currentValue.slice(0, -1) + action.payload.operation
           : state.currentValue + action.payload.operation,
-        ...action.payload,
+        operation: action.payload.operation,
       }
     case RESET_VALUE:
     case CLEAR_HISTORY:
