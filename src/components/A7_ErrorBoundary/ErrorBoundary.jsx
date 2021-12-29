@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { ErrorText } from '@/components/A7_ErrorBoundary/components'
 
 export class ErrorBoundary extends React.Component {
@@ -11,10 +12,6 @@ export class ErrorBoundary extends React.Component {
       textError: null,
     }
   }
-
-  // static getDerivedStateFromError(error) {
-  //   this.setState({ hasError: true, textError: 'Произошла непредвиденная ошибка, перезапустите приложение' })
-  // }
 
   componentDidCatch(error, errorInfo) {
     this.setState({ hasError: true, error, errorInfo,textError: 'Произошла непредвиденная ошибка, перезапустите приложение' })
