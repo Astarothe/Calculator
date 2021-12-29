@@ -20,13 +20,6 @@
         "ignorePattern": "import"
       }
     ],
-    "import/order": [
-      "error",
-      {
-        "newlines-between": "always",
-        "groups":["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"]
-      }
-    ],
     "no-unused-vars": "warn",
     "operator-linebreak": "warn",
     "react-hooks/rules-of-hooks": "error",
