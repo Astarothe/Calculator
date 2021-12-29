@@ -9,18 +9,20 @@ import { coloredBackground, darkBackground, white } from '@/theme'
 class SwitchTheme extends React.PureComponent {
   constructor(props) {
     super(props)
-    this.dispatch = this.props.dispatch
+    this.changeLightThemeHandler = this.props.changeLightThemeHandler
+    this.changeDarkThemeHandler = this.props.changeDarkThemeHandler
+    this.changeColoredThemeHandler = this.props.changeColoredThemeHandler
   }
 
   handleOnChangeTheme = e => {
     const targetValue = e.target.value
 
     if (targetValue === LIGHT_THEME_ID) {
-      this.dispatch(changeOnLightThemeAC())
+      this.changeLightThemeHandler()
     } else if (targetValue === DARK_THEME_ID) {
-      this.dispatch(changeOnDarkThemeAC())
+      this.changeDarkThemeHandler()
     } else{
-      this.dispatch(changeOnColoredThemeAC())
+      this.changeColoredThemeHandler()
     }
   }
 
@@ -65,11 +67,23 @@ class SwitchTheme extends React.PureComponent {
       </WrapperSwitch>
     )
   }
-
-
 }
 
-export default connect(state => ({ currentTheme: state.theme.currentTheme }))(SwitchTheme)
+
+
+  // container-component
+
+const mapStateToProps = state => ({
+  currentTheme: state.theme.currentTheme,
+})
+
+const mapDispatchToProps = dispatch => ({
+  changeLightThemeHandler: () => dispatch(changeOnLightThemeAC()),
+  changeDarkThemeHandler: () => dispatch(changeOnDarkThemeAC()),
+  changeColoredThemeHandler: () => dispatch(changeOnColoredThemeAC()),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(SwitchTheme)
 
 
 // console.log(props)
