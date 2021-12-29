@@ -11,6 +11,7 @@ class SettingsPage extends React.Component {
     super(props)
     this.settings = createRef()
     this.dispatch = this.props.dispatch
+    this.handleClearHistory = this.props.handleClearHistory
   }
 
   componentDidMount() {
@@ -42,7 +43,7 @@ class SettingsPage extends React.Component {
             Settings
           </Heading>
           <SwitchTheme />
-          <ButtonClear onClick={() => this.dispatch(clearHistoryAC())}>
+          <ButtonClear onClick={this.handleClearHistory}>
             Clear All History
           </ButtonClear>
         </WrapperSettings>
@@ -51,4 +52,8 @@ class SettingsPage extends React.Component {
   }
 }
 
-export default connect()(SettingsPage)
+const mapDispatchToProps = dispatch => ({
+  handleClearHistory: () => dispatch(clearHistoryAC()),
+})
+
+export default connect(null,mapDispatchToProps)(SettingsPage)
