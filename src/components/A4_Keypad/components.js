@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { Wrapper } from '@/pages/Home/components'
 
 export const Button = styled.button`

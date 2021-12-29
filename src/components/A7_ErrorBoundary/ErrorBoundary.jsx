@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { ErrorText } from '@/components/A7_ErrorBoundary/components'
 
 export class ErrorBoundary extends React.Component {

@@ -1,4 +1,5 @@
 import { handleActions } from 'redux-actions'
+
 import {
   ADD_OPERATION,
   ADD_VALUE,

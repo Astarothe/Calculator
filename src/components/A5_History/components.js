@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { Wrapper } from '@/pages/Home/components'
 import { DisplayWrapper } from '@/components/A3_Display/components'
 

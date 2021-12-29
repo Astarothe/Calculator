@@ -1,6 +1,7 @@
 import React from 'react'
-import { HistoryItem, HistoryTitle, HistoryWrapper, HistoryItemWrapper } from '@/components/A5_History/components'
 import { useSelector } from 'react-redux'
+
+import { HistoryItem, HistoryTitle, HistoryWrapper, HistoryItemWrapper } from '@/components/A5_History/components'
 import { ErrorBoundary } from '@/components/A7_ErrorBoundary/ErrorBoundary'
 
 export const History = () => {

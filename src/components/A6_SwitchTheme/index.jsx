@@ -1,10 +1,12 @@
 import React from 'react'
-import { changeOnColoredThemeAC, changeOnDarkThemeAC, changeOnLightThemeAC } from '@/actions'
 import { connect } from 'react-redux'
-import { Select } from '@/components/A6_SwitchTheme/components'
-import { TitleTheme, WrapperSwitch } from '@/pages/Settings/components'
+
+import { changeOnColoredThemeAC, changeOnDarkThemeAC, changeOnLightThemeAC } from '@/actions'
 import { itemsTheme, DARK_THEME_ID, LIGHT_THEME_ID, COLORED_THEME_ID } from '@/constants'
 import { coloredBackground, darkBackground, white } from '@/theme'
+import { Select } from '@/components/A6_SwitchTheme/components'
+import { TitleTheme, WrapperSwitch } from '@/pages/Settings/components'
+
 
 class SwitchTheme extends React.PureComponent {
   constructor(props) {

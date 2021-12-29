@@ -1,6 +1,7 @@
 import React from 'react'
-import { Expression, DisplayWrapper, Result } from '@/components/A3_Display/components'
 import { useSelector } from 'react-redux'
+
+import { Expression, DisplayWrapper, Result } from '@/components/A3_Display/components'
 import { separator } from '@/helpers'
 
 export const Display = () => {

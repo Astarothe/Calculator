@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 
-import example, { calcReducer } from './calcReducer'
+
 import { historyReducer } from '@/reducers/historyReducer'
 import { themeReducer } from '@/reducers/themeReducer'
+
+import example, { calcReducer } from './calcReducer'
 
 export const rootReducer = combineReducers({
   example,
